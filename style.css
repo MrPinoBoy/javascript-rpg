@@ -1,0 +1,195 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+.header {
+  display: block;
+  margin: 0;
+  padding-top: 5vh;
+  text-align: center;
+  color: lightblue;
+  text-shadow: 3px 3px 1px black;
+  height: 10vh;
+  background: url(https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDQxMC5wbmc=/original/hCUwLQ.png);
+  background-position: bottom;
+}
+
+main {
+  background-color: darkslategray;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.creation-screen1,
+.creation-screen2 {
+}
+
+.creation-screen2 {
+  display: none;
+}
+
+.fight-screen {
+  margin-top: 64px;
+  background-color: darkslategray;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  display: none;
+}
+
+.player1,
+.player2 {
+  display: flex;
+  background: lightcoral;
+  width: 500px;
+  height: 500px;
+  border-radius: 5%;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bolt {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  height: 450px;
+  fill: orange;
+}
+
+.vstext {
+  position: absolute;
+  z-index: 0;
+  align-self: center;
+  transform: rotate(-15deg);
+  font-size: 48px;
+  color: red;
+  text-shadow: 2px 2px 0px black;
+}
+
+.character1,
+.character2 {
+  display: flex;
+  min-width: 80%;
+  min-height: 80%;
+  margin: 10%;
+  border-radius: 5%;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+}
+
+.health-bar1,
+.health-bar2 {
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.charactersprite {
+  background-color: brown;
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+
+.characterimg {
+  position: absolute;
+}
+
+.charactername {
+  position: relative;
+  top: 87%;
+  left: 5%;
+  color: white;
+  text-shadow: 2px 2px 0px black;
+}
+
+.buttonsp1,
+.buttonsp2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 10%;
+  z-index: 100;
+}
+
+.buttonsp2 {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  height: 100%;
+  font-family: "Press Start 2P", cursive;
+  background-color: lightseagreen;
+}
+
+.hit {
+  box-shadow: inset 2px 0px 0px black, inset -1px 0px 0px black,
+    inset 0px 2px 0px black, inset 0px -2px 0px black;
+}
+
+.hit:hover {
+  background-color: rgb(36, 218, 208);
+  cursor: pointer;
+}
+
+.heal {
+  box-shadow: inset 1px 0px 0px black, inset -1px 0px 0px black,
+    inset 0px 2px 0px black, inset 0px -2px 0px black;
+}
+
+.heal:hover {
+  background-color: rgb(36, 218, 208);
+  cursor: pointer;
+}
+
+.yield {
+  box-shadow: inset 1px 0px 0px black, inset -2px 0px 0px black,
+    inset 0px 2px 0px black, inset 0px -2px 0px black;
+}
+
+.yield:hover {
+  background-color: rgb(36, 218, 208);
+  cursor: pointer;
+}
+
+.action-log {
+  display: none;
+  flex-flow: column;
+  margin: auto;
+  width: 80%;
+  background-color: cadetblue;
+  padding: 8px 16px;
+  border: 4px brown inset;
+}
+
+.logs {
+  display: flex;
+  line-height: 0.25;
+}
+
+.restartButton {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 10%;
+  width: 10%;
+  margin: auto;
+}
